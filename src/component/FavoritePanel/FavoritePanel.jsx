@@ -1,7 +1,6 @@
 import React from 'react';
+import Card from '../Card/Card';
 import styles from './FavoritePanel.module.css'
-import ReactStars from "react-rating-stars-component";
-import LikeButton from '../Buttons/LikeButton/LikeButton';
 
 const FavoritePanel = () => {
     return (
@@ -16,16 +15,9 @@ const FavoritePanel = () => {
                   <button className={styles.favorite__button}>Цена</button>
                 </div>
                 <div className={styles.card__container}>
-                  <div className={styles.card}>
-                    <h2 className={styles.card__title}>Moscow Marriott Grand Hotel</h2>
-                    <p className={styles.card__description}>28 June, 2020 - <span>1 день</span></p>
-                    <LikeButton/>
-                    <ReactStars
-                      count={5}
-                      size={24}
-                      activeColor="#ffd700"
-                    />
-                  </div>
+                  <Card/>
+                  <Card/>
+                  <Card/>
                 </div>
               </div>
             </div>

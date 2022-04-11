@@ -1,6 +1,26 @@
-.like {
-width: 15%;
 
+
+.heart {
+    color: red;
 }
 
+.like__icon {
+    width: 23px;
+    height: 20px;
+    background-image: url('../../../image/icons/like__icon/like.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.like__icon:hover {
+    background-image: url('../../../image/icons/like__icon/like__hover.svg');
+}
+    
+.like__icon_active {
+    width: 23px;
+    height: 20px;
+    background-image: url('../../../image/icons/like__icon/like__active.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
 

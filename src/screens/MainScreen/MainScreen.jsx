@@ -1,6 +1,7 @@
 import React from 'react';
 import FavoritePanel from '../../component/FavoritePanel/FavoritePanel';
 import SearchForm from '../../component/Forms/SearchForm/SearchForm';
+import MainPanel from '../../component/MainPanel/MainPanel';
 import styles  from './MainScreen.module.css';
 
 const MainScreen = () => {
@@ -12,8 +13,9 @@ const MainScreen = () => {
           <button className={styles.main__exit_button}>Выйти</button>
         </header>
         <section className={styles.main__content}>
-          <SearchForm/>
-          <FavoritePanel/>
+          <SearchForm className={styles.searchForm}/>
+          <FavoritePanel className={styles.favoritePanel}/>
+          <MainPanel className={styles.mainPanel}/>
         </section>
       </div>
     </div>
