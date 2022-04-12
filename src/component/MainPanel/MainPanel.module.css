@@ -42,3 +42,40 @@
   text-align: right;
   color: #41522E;
 }
+
+.favorite {
+  margin-top: 28px;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: #424242;
+
+}
+
+.count_of_hotels {
+  font-weight: 500;
+  color: #41522E;
+}
+
+.card__container {
+  height: 529px;
+  overflow-y: scroll;
+  padding-top: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: #6969dd #e0e0e0;
+}
+
+
+.card__container::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+.card__container::-webkit-scrollbar {
+  width: 2px;
+}
+.card__container::-webkit-scrollbar-thumb {
+  border-radius: 2px;background: #f0f2f5;
+}
+.card__container:hover::-webkit-scrollbar-thumb {
+  background: #41522E;
+}

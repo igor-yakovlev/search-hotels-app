@@ -1,0 +1,17 @@
+.wrapper {
+ width: 600px;
+ margin-top: 28px;
+}
+
+.title {
+  text-align: center;
+  color: red;
+  font-size: 80px;
+}
+
+
+.image {
+  margin: 2px;
+
+}
+

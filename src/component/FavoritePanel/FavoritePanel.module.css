@@ -73,18 +73,6 @@
   border-radius: 4px;
 }
 
-/* .favorite__button:before,
-.favorite__button:after {
-  border-style: solid;
-  border-width: 8px 5px;
-  border-color: transparent;
-  content: '';
-  height: 0;
-  position: absolute;
-  right: 10px;
-  width: 0;
-} */
-
 .favorite__button::before {
   content: '';
   background-image: url('../../image/icons/select__up.svg');

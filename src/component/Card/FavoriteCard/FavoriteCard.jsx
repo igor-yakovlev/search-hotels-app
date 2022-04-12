@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './Card.module.css';
+import styles from './FavoriteCard.module.css';
 import ReactStars from "react-rating-stars-component";
-import LikeButton from '../Buttons/LikeButton/LikeButton';
+import LikeButton from '../../Buttons/LikeButton/LikeButton';
 
-const Card = () => {
+const FavoriteCard = () => {
     return (
         <div className={styles.card}>
           <div className={styles.card__header}>
-            <div className={styles.card__wrapper}>
+            <div className={styles.card__info}>
             <h2 className={styles.card__title}>Moscow Marriott Grand Hotel</h2>
             <p className={styles.card__description}>28 June, 2020 - <span>1 день</span></p>
             </div>
@@ -28,4 +28,4 @@ const Card = () => {
     );
 };
 
-export default Card;
+export default FavoriteCard;

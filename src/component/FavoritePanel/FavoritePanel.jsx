@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Card/Card';
+import FavoriteCard from '../Card/FavoriteCard/FavoriteCard';
 import styles from './FavoritePanel.module.css'
 
 const FavoritePanel = () => {
@@ -15,9 +15,9 @@ const FavoritePanel = () => {
                   <button className={styles.favorite__button}>Цена</button>
                 </div>
                 <div className={styles.card__container}>
-                  <Card/>
-                  <Card/>
-                  <Card/>
+                  <FavoriteCard/>
+                  <FavoriteCard/>
+                  <FavoriteCard/>
                 </div>
               </div>
             </div>
