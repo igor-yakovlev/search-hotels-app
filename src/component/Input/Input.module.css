@@ -1,4 +1,5 @@
 .input {
+  position: relative;
   margin: 0;
   padding: 15px;
   font-weight: 300;
@@ -13,11 +14,16 @@
   margin-top: 7px;
 }
 
-.input::-webkit-calendar-picker-indicator {
+.input::after {
+  position: absolute;
   color: transparent;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
   opacity: 1;
   background: url('../../image/icons/input__calendly.svg') no-repeat center;
-  background-size: contain;
+  background-size: cover;
 }
 
 
