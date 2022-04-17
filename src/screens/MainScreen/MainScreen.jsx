@@ -22,9 +22,9 @@ const initialParams = {
 const MainScreen = () => {
   const navigate = useNavigate();
   const [params, setParams] = useState(initialParams);
-  const data = useFetchHotels(params)
+  const [favorite, setFavorite] = useState([]);
+  const data = useFetchHotels(params);
 
-  console.log({data});
 
   const handleClick = () => {
     navigate('/')
@@ -43,6 +43,22 @@ const MainScreen = () => {
     }))
   }
 
+
+  const handleAddFavorite = (favoriteItem) => {
+    
+    if(favorite.length === 0) {
+      setFavorite([...favorite, data.find(item => item.hotelId === favoriteItem)]);
+    }
+    if (favorite.every(item => item.hotelId !== favoriteItem)) {
+      setFavorite([...favorite, data.find(item => item.hotelId === favoriteItem)]);
+    }
+  }
+
+  const handleRemoveFavorite = (favoriteItem) => {
+    setFavorite(favorite.filter(item => item.hotelId !== favoriteItem));
+  }
+
+
   return (
     <div className={styles.main__wrapper}>
       <div className={styles.main__container}>
@@ -56,8 +72,8 @@ const MainScreen = () => {
             checkIn: new Date(initialParams.checkIn),
             daysCount: DEFAULT_DAYS_COUNT
           }} onSubmit={handleSubmit}/>
-          <FavoritePanel className={styles.favoritePanel}/>
-          <MainPanel className={styles.mainPanel}/>
+          <FavoritePanel removeFavorite={handleRemoveFavorite} params={params} favorite={favorite} className={styles.favoritePanel}/>
+          <MainPanel addFavorite={handleAddFavorite} favorite={favorite} params={params} hotels={data} className={styles.mainPanel}/>
         </section>
       </div>
     </div>

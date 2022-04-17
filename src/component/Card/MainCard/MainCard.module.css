@@ -10,14 +10,15 @@
 }
 
 .card__image {
-  background-image: url('../../../image/icons/image__mainCard.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 64px;
+  box-sizing: border-box;
+  width: 75px;
   height: 64px;
   background-color: rgba(65, 82, 46, 0.05);
   border-radius: 50%;
   margin-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

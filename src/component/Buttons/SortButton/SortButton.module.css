@@ -1,0 +1,53 @@
+.button {
+  background-color: transparent;
+  text-align: left;
+  border: 1px solid #E5E5E5;
+  height: 28px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 4px 8px;
+  padding-right: 30px;
+  margin-right: 8px;
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #E5E5E5;
+  border-radius: 4px;
+}
+
+.button::before {
+  content: '';
+  background-image: url('../../../image/icons/select__up.svg');
+  width: 9px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  right: 12.5px;
+}
+
+.button::after {
+  content: '';
+  background-image: url('../../../image/icons/select__down.svg');
+  width: 9px;
+  height: 6px;
+  position: absolute;
+  bottom: 7px;
+  right: 12.5px;
+}
+
+
+.button:active {
+  border: 1px solid #41522E;
+  color: #41522E;
+}
+
+.button::before {
+  content: '';
+  background-image: url('../../../image/icons/select__up.svg');
+  width: 9px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  right: 12.5px;
+}

@@ -79,3 +79,10 @@
 .card__container:hover::-webkit-scrollbar-thumb {
   background: #41522E;
 }
+
+
+.loading {
+  display: flex;  
+  align-items: center;
+  font-size: 48px;
+}

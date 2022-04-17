@@ -8,7 +8,6 @@ export function useFetchHotels(params) {
   const [data, setData] = useState(null);
 
 
-
   useEffect(() => {
     const fetchData = async () => {
       const url = new URL(`${window.location.origin}/${API__HOTELS}`);
@@ -27,7 +26,7 @@ export function useFetchHotels(params) {
     fetchData()
   }, [params]);
 
-  console.log(data);
+  
   return data;
 }
 
