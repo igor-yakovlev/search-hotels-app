@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './MainCard.module.css';
 import ReactStars from "react-rating-stars-component";
 import LikeButton from '../../Buttons/LikeButton/LikeButton';
 import {format} from "date-fns";
 import { ru } from 'date-fns/locale';
 import img from '../../../image/icons/image__mainCard.svg';
+import { useEndOfWord } from '../../../hooks/useEndOfWord';
 
 const MainCard = ({value, params, addFavorite} ) => {
     const liked = false;
@@ -13,23 +14,8 @@ const MainCard = ({value, params, addFavorite} ) => {
 
     const countOfDays = new Date(checkOut).getDate() - new Date(checkIn).getDate()
 
-    let dayWord;
-    switch (countOfDays) {
-        case 1:
-            dayWord = 'день';
-        break;
-        case 2:
-          dayWord = 'дня';
-              break;
-        case 3:
-          dayWord = 'дня';
-              break;
-        case 4:
-          dayWord = 'дня';
-              break;
-        default:
-          dayWord = 'дней';
-    }
+    let dayWord = useEndOfWord(countOfDays);
+
 
 
     const handleLikeClick = (e) => {

@@ -8,7 +8,6 @@ import img from '../../image/icons/carousel__item.jpg'
 
 export default class SwipeToSlide extends Component {
   render() {
-    const baseUrl = '../../image/icons/carousel__item.jpg'
 
     const settings = {
       className: "center",

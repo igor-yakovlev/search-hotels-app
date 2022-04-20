@@ -4,13 +4,18 @@ import ReactStars from "react-rating-stars-component";
 import LikeButton from '../../Buttons/LikeButton/LikeButton';
 import {format} from "date-fns";
 import { ru } from 'date-fns/locale';
+import { useEndOfWord } from '../../../hooks/useEndOfWord';
 
 const FavoriteCard = ({value, params, removeFavorite}) => {
     const { hotelName, stars, priceAvg, hotelId} = value;
-    const {checkIn} = params;
+    const {checkIn, checkOut} = params;
     const [liked, setLiked] = useState(false);
 
-    const handleLikeClick = (e) => {
+    const countOfDays = new Date(checkOut).getDate() - new Date(checkIn).getDate()
+    let dayWord = useEndOfWord(countOfDays);
+
+
+    const handleLikeClick = () => {
       let localLiked = liked;
       setLiked(!localLiked);
       removeFavorite(hotelId);
@@ -21,7 +26,7 @@ const FavoriteCard = ({value, params, removeFavorite}) => {
           <div className={styles.card__header}>
             <div className={styles.card__info}>
             <h2 className={styles.card__title}>{hotelName}</h2>
-            <p className={styles.card__description}>{format(new Date(checkIn), 'dd MMMM y', {locale: ru})} - <span>1 день</span></p>
+            <p className={styles.card__description}>{format(new Date(checkIn), 'dd MMMM y', {locale: ru})} - <span>{countOfDays} {dayWord}</span></p>
             </div>
             <LikeButton onClick={handleLikeClick}/>
           </div>

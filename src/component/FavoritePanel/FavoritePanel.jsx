@@ -3,8 +3,10 @@ import FavoriteCard from '../Card/FavoriteCard/FavoriteCard';
 import styles from './FavoritePanel.module.css'
 import SortButton from '../Buttons/SortButton/SortButton';
 
-const FavoritePanel = ({favorite, params, removeFavorite}) => {
-  
+
+const FavoritePanel = ({favorite, params, removeFavorite, sortFavorite}) => {
+
+
     return (
       <div className={styles.wrapper}>
             <div className={styles.favorite}>
@@ -13,8 +15,8 @@ const FavoritePanel = ({favorite, params, removeFavorite}) => {
               </header>
               <div className={styles.favorite__body}>
                 <div className={styles.favorite__filters}>
-                  <SortButton>Рейтинг</SortButton>
-                  <SortButton>Цена</SortButton>
+                  <SortButton id={'stars'} sort={sortFavorite}>Рейтинг</SortButton>
+                  <SortButton id={'priceAvg'} sort={sortFavorite}>Цена</SortButton>
                 </div>
                 <div className={styles.card__container}>
                   {!favorite.length ? <div className={styles.without_favorite}>Нет избранных отелей</div> : favorite.map(it => <FavoriteCard removeFavorite={removeFavorite} key={it.hotelId} params={params} value={it}/> )}

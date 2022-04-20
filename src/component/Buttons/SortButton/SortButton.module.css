@@ -36,18 +36,23 @@
   right: 12.5px;
 }
 
-
-.button:active {
-  border: 1px solid #41522E;
-  color: #41522E;
-}
-
 .button::before {
   content: '';
-  background-image: url('../../../image/icons/select__up.svg');
+
   width: 9px;
   height: 6px;
   position: absolute;
   top: 7px;
   right: 12.5px;
 }
+
+
+.active {
+  border: 1px solid #41522E;
+  color: #41522E;
+}
+
+.active::before {
+  background-image: url('../../../image/icons/select__up_active.svg');
+}
+
