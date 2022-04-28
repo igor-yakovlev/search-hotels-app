@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-const API__HOTELS = 'api/v2/cache.json';
+const API__HOTELS = 'https://engine.hotellook.com/api/v2/cache.json';
 
 
 export function useFetchHotels(params) {
@@ -10,7 +10,7 @@ export function useFetchHotels(params) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = new URL(`${window.location.origin}/${API__HOTELS}`);
+      const url = new URL(`${API__HOTELS}`);
 
       if(params) {
         Object.entries(params).forEach(param => url.searchParams.append(...param))
@@ -26,7 +26,7 @@ export function useFetchHotels(params) {
     fetchData()
   }, [params]);
 
-  
+
   return data;
 }
 
