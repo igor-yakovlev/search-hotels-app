@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Проект: Приложение по поиску отелей
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
+Web приложение для поиска отелей, которое имеет два экрана.
+Переход между экранами осуществляется при помощи [react-dom-router] (https://v5.reactrouter.com/web/guides/quick-start).
+На первом экране располагается окно авторизации с валидацией, реализованной на стороне клиентской части приложения посредством пакета [react-hook-form] (https://react-hook-form.com/).
+На втором экране имеется несколько панелей. Левая верхняя панель осуществляет поиск  отелей исходя из места заселения, даты и количества дней. На правой панель выводятся результаты поиска с возможность просмотра рейтинга. В левой нижней панели появляются отели ,добавленные в избранное.
+Запросы на сервер осуществляются при помощи созданного хука useFetchHotels. в качестве сервера выступает [API](https://support.travelpayouts.com/hc/ru/articles/115000343268-API-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BE%D1%82%D0%B5%D0%BB%D0%B5%D0%B9#price).
 
-## Available Scripts
+### Технологии используемые в проекте
+1. [React](https://ru.reactjs.org/).
+2. Технология [Grid-Layout](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+3. [CSS-модули](https://frontender.info/css-modules-part-1-need/).
+4. [React-dom-router](https://v5.reactrouter.com/web/guides/quick-start).
+5. [Date-fns](https://date-fns.org/).
+6. [Font-awesome](https://fontawesome.com/).
+7. [React-hook-form](https://react-hook-form.com/).
 
-In the project directory, you can run:
+## Запуск проекта
+После клонирования репозитория производится установка зависимостей yarn install. Далее командой yarn start осуществляется сборка  приложения.
+Ссылка на задеплоинный проект [Search-Hotels](https://heartfelt-vacherin-815cb6.netlify.app)
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Планы по развитию проекта
+В дальнейшем планируется адаптациб под мобильные устройства.Добавить стилизацию кнопок на панели "Избранное".
